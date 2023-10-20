@@ -1,0 +1,59 @@
+def factorial_1(n):
+  if n == 0:
+    return 1
+  else:
+    return n*factorial_1(n-1)
+def divisors_2(n):
+  divisors =[]
+  for i in range(n):
+    i+=1
+    if n % i == 0:
+      divisors.append(i)
+  return divisors
+def reverse_string_3(n):
+  return n[::-1]
+def even_list_4(n):
+  evenlist=[]
+  for i in range(n):
+    if n[i] % 2 == 0:
+      evenlist.append(n[i])
+  return evenlist
+def password_5(n):
+  if len(n) < 8:
+    print("weak password")
+  else:
+      count1 = 0
+      count2 = 0
+      count3 = 0
+
+      for a in n: 
+        
+          if a.isupper() : 
+              count1 += 1 
+          elif a.islower(): 
+              count2 += 1
+          elif a == "#" or a== "!" or a== "?" or a == "$" :
+              count3 +=1
+      if count1 > 0 and count2 > 0 and count3 > 0:
+        print("strong password")
+
+def ipv4(n):
+  if n.count(".")==3:
+    if n[0]>0:
+      m=n.split(".")
+      if m[0] >= 0 and m[0] <= 255 and m[1] >= 0 and m[1]<=255 and m[2] >= 0 and m[2] <= 255 and m[3] >= 0 and m[3]<=255:
+        print(f"{n} is valid ipv4 address")
+  else:
+    print("invalid ipv4 address")
+def statistics(n):
+  Mean=sum(n)/len(n)
+  if n/2==0:
+    Median=n[len(n/2)]
+  else :
+    Median=n[(len(n//2)+len(n//2+1))/2]
+  m=n.sort()
+  range= m[-1]-m[0]
+  
+  
+  
+  
