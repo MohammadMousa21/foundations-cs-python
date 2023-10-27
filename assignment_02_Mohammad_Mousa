@@ -1,0 +1,35 @@
+def count_digits(number,count):
+
+  if number > 0:
+    number=number // 10
+    count_digits(number,count+1)
+  else:
+     print("the number of digits is ",count)
+print(""""
+1. Count Digits
+2. Find Max
+3.1. Count Tags
+3.2. Count Normalized Columns
+4. Exit
+- - - - - - - - - - - - - - -""")
+choice = int(input("Enter a choice: "))
+if choice == 1:
+  number=int(input("enter a number "))
+  count_digits(number,count=0)
+elif choice == 2:
+  list=[]
+  n=int(input("enter the elements of the list"))
+  for i in range(n):
+    list.append(int(input("enter the elements of the list")))
+    print("the max number of the list is ",max(list))
+elif choice == 3.1:
+  code=input("enter the code ")
+  tag=input("enter the tag ")
+  list=code.split("<"+tag+">")
+  print("the number of tags is ",len(list)-1)
+elif choice == 3.2:
+  print("fsd")
+elif choice == 4:
+  
+
+    
